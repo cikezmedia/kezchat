@@ -18,8 +18,7 @@ const Forgot = () => {
   } = useForm();
 
   const submitForm = (data) => {
-    console.log(data);
-    router.push('/');
+    router.push('/login');
   };
 
   return (
