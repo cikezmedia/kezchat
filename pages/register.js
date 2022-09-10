@@ -1,25 +1,24 @@
 import Head from 'next/head';
 import Image from 'next/image';
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { BsImages } from 'react-icons/bs';
 import { FaEye } from 'react-icons/fa';
 import { useForm } from 'react-hook-form';
 import Link from 'next/link';
 
-const register = () => {
+const Register = () => {
   const [err, setErr] = useState('');
   const [hide, setHide] = useState(true);
-
-  const togglePassword = () => {
-    setHide(!hide);
-  };
 
   const {
     register,
     handleSubmit,
-    watch,
     formState: { errors },
   } = useForm();
+
+  const togglePassword = () => {
+    setHide(!hide);
+  };
 
   //console.log(watch('fullname'));
 
@@ -176,4 +175,4 @@ const register = () => {
   );
 };
 
-export default register;
+export default Register;

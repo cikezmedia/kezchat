@@ -11,10 +11,6 @@ const Forgot = () => {
   const [hide, setHide] = useState(true);
   const router = useRouter();
 
-  const togglePassword = () => {
-    setHide(!hide);
-  };
-
   const {
     register,
     handleSubmit,
