@@ -12,6 +12,7 @@ module.exports = {
         mainPurple: '#0057FF',
         mainBlack: '#171618',
         lightBlue: '#e4ecfc',
+        lightCard: '#4e5c77',
       },
       fontFamily: {
         poppins: ['Poppins', 'sans-serif'],
