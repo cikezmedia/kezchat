@@ -1,9 +1,11 @@
 import React from 'react';
+import { Chat, Input } from './';
 
 const Chats = () => {
   return (
     <>
-      <div>Chats</div>
+      <Chat />
+      <Input />
     </>
   );
 };
