@@ -6,7 +6,7 @@ const Input = () => {
   return (
     <>
       <div className='relative'>
-        <form className='w-[92%] absolute p-1 bottom-1 rounded-full border border-gray-300 bg-gray-100 ml-10'>
+        <form className='w-[93%] p-1 absolute rounded-full border border-gray-300 bg-gray-100 ml-10'>
           <div className='flex flex-row items-center'>
             <input
               className='w-full outline-none pr-4 rounded-full pl-3 bg-gray-100 text-gray-600'
