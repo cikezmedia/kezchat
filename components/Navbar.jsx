@@ -6,7 +6,6 @@ import {
   BiUser,
   BiLogOutCircle,
 } from 'react-icons/bi';
-import { RiArrowDownSLine, RiArrowUpSLine } from 'react-icons/ri';
 
 const Navbar = () => {
   const [hide, setHide] = useState(false);
@@ -26,6 +25,9 @@ const Navbar = () => {
             onClick={toggleHide}
             className='items-center rounded-full object-cover cursor-pointer'
           />
+          <span className='hidden lg:block font-semibold text-lg font-quicksand text-mainBlack'>
+            Sherry Brighton
+          </span>
           {hide && (
             <div className='flex flex-col gap-3 w-48 border-2 border-white rounded-lg absolute top-16 bg-mainPurple z-10 p-3 -left-4 text-white font-quicksand font-medium'>
               <span className='font-bold text-lg'>Emmanuel Joeno</span>
