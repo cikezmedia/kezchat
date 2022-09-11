@@ -6,13 +6,13 @@ const Input = () => {
   return (
     <>
       <div className='relative'>
-        <form className='w-[93%] p-1 absolute rounded-full border border-gray-300 bg-gray-100 ml-10'>
+        <form className='w-[98%] p-1 absolute rounded-full border border-gray-300 bg-gray-100 ml-2'>
           <div className='flex flex-row items-center'>
             <input
               className='w-full outline-none pr-4 rounded-full pl-3 bg-gray-100 text-gray-600'
               placeholder='message...'
             />
-            <button className='flex items-center p-2 rounded-full text-white right-6 bg-mainBlack'>
+            <button className='flex items-center p-2 rounded-full text-white right-6 bg-lightCard'>
               <RiSendPlane2Fill className='text-white w-5 h-5' />
             </button>
           </div>

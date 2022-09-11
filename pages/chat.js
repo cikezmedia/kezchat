@@ -13,9 +13,9 @@ export default function Home() {
         <link rel='shortcut icon' href='/favicon.png' />
       </Head>
 
-      <div className='bg-mainBlack'>
-        <div className='flex lg:h-screen justify-center flex-col gap-6 mx-auto lg:max-w-5xl'>
-          <div className='w-full lg:rounded-lg lg:border border-gray-300 bg-white'>
+      <div className='dark:bg-mainBlack bg-lightBlue'>
+        <div className='flex lg:h-screen justify-center flex-col mx-auto lg:max-w-5xl'>
+          <div className='w-full lg:rounded-lg lg:border border-gray-400 bg-white'>
             <Navbar />
             <Messages />
           </div>
