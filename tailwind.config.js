@@ -8,9 +8,10 @@ module.exports = {
     extend: {
       colors: {
         mainLight: '#eef0c8',
-        mainBlue: '#A6D1E6',
+        mainYellow: '#f8bd2f',
         mainPurple: '#0057FF',
         mainBlack: '#171618',
+        mainGray: '#686766',
       },
       fontFamily: {
         poppins: ['Poppins', 'sans-serif'],
@@ -18,5 +19,5 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [require('tailwind-scrollbar-hide')],
 };
