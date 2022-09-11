@@ -7,10 +7,10 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        mainLight: '#FEFBF6',
+        mainLight: '#eef0c8',
         mainBlue: '#A6D1E6',
-        mainPurple: '#7F5283',
-        mainBlack: '#3D3C42',
+        mainPurple: '#0057FF',
+        mainBlack: '#171618',
       },
       fontFamily: {
         poppins: ['Poppins', 'sans-serif'],

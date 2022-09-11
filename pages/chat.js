@@ -9,7 +9,7 @@ export default function Home() {
         <link rel='icon' href='/favicon.ico' />
       </Head>
       <div className='bg-mainLight dark:bg-mainBlack'>
-        <div className='home flex flex-col mx-auto  items-center  max-w-5xl bg-mainLight'>
+        <div className='flex h-screen justify-center flex-col gap-6 mx-auto p-6 items-center max-w-lg'>
           <div className='flex w-full mx-auto  bg-blue items-center outline-none '>
             Hello
           </div>

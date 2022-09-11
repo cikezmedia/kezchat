@@ -33,7 +33,7 @@ const Forgot = () => {
       </Head>
 
       <div className='bg-mainLight dark:bg-mainBlack'>
-        <div className='home flex flex-col gap-6 mx-auto p-6 items-center max-w-lg'>
+        <div className='flex h-screen justify-center flex-col gap-6 mx-auto p-6 items-center max-w-lg'>
           <Image src='/favicon.png' alt='logo' width={54} height={54} />
           {err && <span className='text-red-500'>{err}</span>}
           <div className='w-full p-6 rounded-lg border border-gray-300 bg-white items-center'>
