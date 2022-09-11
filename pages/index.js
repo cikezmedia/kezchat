@@ -39,7 +39,7 @@ const Register = () => {
         <link rel='shortcut icon' href='/favicon.png' />
       </Head>
 
-      <div className='bg-mainLight dark:bg-mainBlack'>
+      <div className='dark:bg-mainBlack bg-lightBlue'>
         <div className='flex h-screen justify-center flex-col gap-6 mx-auto p-6 items-center max-w-lg'>
           <Image src='/favicon.png' alt='logo' width={54} height={54} />
           {err && <span className='text-red-500'>{err}</span>}
