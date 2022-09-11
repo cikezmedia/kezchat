@@ -4,7 +4,7 @@ import Image from 'next/image';
 const ChatCard = () => {
   return (
     <>
-      <div className='flex flex-row place-content-end pl-28 gap-2'>
+      <div className='flex flex-row place-content-end pl-6 lg:pl-28 gap-2'>
         <div className='flex flex-row space-x-4'>
           <div className='bg-lightCard text-white p-3 font-normal rounded-tl-3xl rounded-b-3xl'>
             <p className=''>

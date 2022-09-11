@@ -4,7 +4,7 @@ import Image from 'next/image';
 const ChatCard = () => {
   return (
     <>
-      <div className='flex flex-row pr-28 gap-2'>
+      <div className='flex flex-row pr-6 lg:pr-28 gap-2'>
         <div className='flex flex-row space-x-4'>
           <div className='flex shrink-0 rounded-full w-10 h-10'>
             <Image
