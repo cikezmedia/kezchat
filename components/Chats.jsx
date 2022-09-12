@@ -5,7 +5,6 @@ const Chats = () => {
   return (
     <>
       <Chat />
-      <Input />
       <Call />
     </>
   );

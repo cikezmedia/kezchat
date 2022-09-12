@@ -5,21 +5,34 @@ import { RiSendPlane2Fill } from 'react-icons/ri';
 const Input = () => {
   return (
     <>
-      <div className='relative'>
-        <form className='w-[98%] p-1 absolute rounded-full border border-gray-300 bg-gray-100 lg:ml-2'>
-          <div className='flex flex-row items-center'>
+      <div className='-mt-1 mr-0.5'>
+        <div className='hidden lg:block relative bg-lightCard p-1 pl-2 pr-2 rounded-br-lg -top-0'>
+          <form className='flex flex-row items-center space-x-3'>
+            <BsFillEmojiLaughingFill className='text-mainYellow w-7 h-7' />
             <input
-              className='w-full outline-none pr-4 rounded-full pl-3 bg-gray-100 text-gray-600'
+              className='w-full outline-none pr-4 p-2 rounded-full pl-3 bg-gray-100 text-gray-600'
               placeholder='message...'
             />
-            <button className='flex items-center p-2 rounded-full text-white right-6 bg-lightCard'>
-              <RiSendPlane2Fill className='text-white w-5 h-5' />
+            <button className='flex items-center p-2 rounded-full right-6 bg-white'>
+              <RiSendPlane2Fill className='text-lightCard w-5 h-5' />
             </button>
-          </div>
-          <div className='absolute cursor-pointer bottom-2 -left-9 pl-1 rounded-full'>
-            <BsFillEmojiLaughingFill className='text-mainPurple w-7 h-7' />
-          </div>
-        </form>
+          </form>
+        </div>
+      </div>
+
+      <div className='absolute lg:hidden'>
+        <div className='fixed right-0 bg-lightCard p-2 w-full bottom-0'>
+          <form className='flex flex-row items-center space-x-3'>
+            <BsFillEmojiLaughingFill className='text-mainYellow w-7 h-7' />
+            <input
+              className='w-full outline-none pr-4 p-2 rounded-full pl-3 bg-gray-100 text-gray-600'
+              placeholder='message...'
+            />
+            <button className='flex items-center p-2 rounded-full right-6 bg-white'>
+              <RiSendPlane2Fill className='text-lightCard w-5 h-5' />
+            </button>
+          </form>
+        </div>
       </div>
     </>
   );

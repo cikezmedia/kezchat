@@ -14,12 +14,14 @@ const Start = () => {
         <link rel='shortcut icon' href='/favicon.png' />
       </Head>
 
-      <div className='dark:bg-mainBlack bg-lightBlue'>
-        <div className='flex lg:h-screen justify-center flex-col mx-auto lg:max-w-5xl'>
-          <div className='w-full lg:rounded-lg lg:border border-gray-400 bg-white'>
-            <Navbar />
-            <div className='col-span-2 bg-lightBlue lg:rounded-br-lg space-x-10'>
-              <Chats />
+      <div className='relative'>
+        <div className='dark:bg-mainBlack bg-lightBlue'>
+          <div className='flex lg:h-screen justify-center flex-col mx-auto lg:max-w-5xl'>
+            <div className='w-full lg:rounded-lg lg:border border-gray-400 bg-white'>
+              <Navbar />
+              <div className='bg-lightBlue lg:mt-16 lg:rounded-br-lg space-x-10'>
+                <Chats />
+              </div>
             </div>
           </div>
         </div>

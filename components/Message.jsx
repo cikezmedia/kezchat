@@ -17,10 +17,10 @@ const Message = () => {
                 className='flex flex-col items-center rounded-full object-cover cursor-pointer'
               />
               <div className='flex flex-col'>
-                <span className='text-mainPurple font-semibold font-quicksand'>
+                <span className='text-mainBlack font-bold font-quicksand'>
                   Emilia Bones
                 </span>
-                <p className='text-gray-600 text-sm'>Lorem ipsum ipsum...</p>
+                <p className='text-gray-500 text-sm'>Lorem ipsum ipsum...</p>
               </div>
             </div>
             <span className='text-gray-600 text-sm font-poppins'>now</span>

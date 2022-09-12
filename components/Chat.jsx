@@ -1,11 +1,11 @@
 import React from 'react';
-import { ChatCard, ChatCardLeft } from './';
+import { ChatCard, ChatCardLeft, Input } from './';
 
 const Chat = () => {
   return (
     <>
-      <div className='flex h-[calc(92%)] '>
-        <div className='flex p-5 scrollbar-hide flex-col gap-4 overflow-auto h-[590px] lg:h-[550px]'>
+      <div className='relative'>
+        <div className='flex p-5 scrollbar-hide flex-col gap-4 overflow-auto pb-16 lg:pb-4 pt-28 lg:pt-4 lg:h-[35rem]'>
           <ChatCard />
           <ChatCardLeft />
           <ChatCard />
@@ -13,10 +13,14 @@ const Chat = () => {
           <ChatCardLeft />
           <ChatCardLeft />
           <ChatCard />
+          <ChatCard />
+          <ChatCard />
+          <ChatCardLeft />
           <ChatCard />
           <ChatCard />
           <ChatCardLeft />
         </div>
+        <Input />
       </div>
     </>
   );

@@ -14,14 +14,14 @@ const Call = () => {
       <div className='relative'>
         <button
           onClick={toggleIcon}
-          className='absolute bottom-4 w-10 h-10 bg-mainYellow rounded-full right-2'
+          className='w-10 h-10 fixed bottom-16 right-3 bg-mainYellow rounded-full'
         >
           <span className='flex-col flex items-center mx-auto'>
             <AiOutlineAudio className='w-6 h-6' />
           </span>
         </button>
         {show && (
-          <div className='flex flex-col absolute right-4 bottom-16 rounded-lg bg-mainYellow p-4 gap-3'>
+          <div className='flex flex-col fixed right-4 bottom-32 rounded-lg bg-mainYellow p-4 gap-3'>
             <div className='flex flex-row items-center space-x-2'>
               <BiPhoneCall className='w-5 h-5' />
               <span className='font-medium'>Voice Call</span>
