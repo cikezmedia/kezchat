@@ -1,15 +1,29 @@
 import Head from 'next/head';
 import Image from 'next/image';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import { useForm } from 'react-hook-form';
 import Link from 'next/link';
+import LoadImg from '../public/loading.gif';
+import { signInWithEmailAndPassword } from 'firebase/auth';
+import { auth } from './firebase';
 import { useRouter } from 'next/router';
+import { AuthContext } from '../context/AuthContext';
+import { useContext } from 'react';
 
 const Login = () => {
   const [err, setErr] = useState('');
   const [hide, setHide] = useState(true);
+  const [loading, setLoading] = useState(false);
   const router = useRouter();
+
+  const { currentUser } = useContext(AuthContext);
+
+  useEffect(() => {
+    if (currentUser) {
+      router.push('/');
+    }
+  }, []);
 
   const togglePassword = () => {
     setHide(!hide);
@@ -21,9 +35,17 @@ const Login = () => {
     formState: { errors },
   } = useForm();
 
-  const submitForm = (data) => {
-    console.log(data);
-    router.push('/chat');
+  const submitForm = async (data, event) => {
+    event.preventDefault();
+    const { email, password } = data;
+    setLoading(true);
+    try {
+      await signInWithEmailAndPassword(auth, email, password);
+      router.push('/');
+    } catch (error) {
+      setErr('Login failed, please try again.');
+      setLoading(false);
+    }
   };
 
   return (
@@ -40,13 +62,13 @@ const Login = () => {
       <div className='dark:bg-mainBlack bg-lightBlue'>
         <div className='flex h-screen justify-center flex-col gap-6 mx-auto p-6 items-center max-w-lg'>
           <Image src='/favicon.png' alt='logo' width={54} height={54} />
-          {err && <span className='text-red-500'>{err}</span>}
           <div className='w-full p-6 rounded-lg border border-gray-300 bg-white items-center'>
             <div className='flex flex-col gap-2 items-center mx-auto'>
               <h2 className='text-2xl font-quicksand font-bold text-mainPurple'>
                 KezChat
               </h2>
               <span className='text-gray-600'>Login to your account</span>
+              {err && <span className='text-red-500'>{err}</span>}
             </div>
             <form
               className='pt-8 space-y-4'
@@ -125,9 +147,18 @@ const Login = () => {
                   <a className='text-mainPurple text-sm'>Reset password</a>
                 </Link>
               </div>
-              <div className='flex flex-col pt-4 pb-4 items-center mx-auto'>
-                <button className='p-1.5 px-5 text-white font-seminbold bg-mainPurple rounded-lg'>
-                  Login
+              <div className='flex flex-col pt-4 pb-3 items-center mx-auto'>
+                <button
+                  type='submit'
+                  className='p-2 px-5 text-white font-semibold bg-mainPurple rounded-lg'
+                >
+                  {loading ? (
+                    <span className='flex p-1'>
+                      <Image src={LoadImg} width={20} height={20} />
+                    </span>
+                  ) : (
+                    'Continue'
+                  )}
                 </button>
               </div>
               <span className='flex flex-col text-sm items-center text-center text-gray-500'>

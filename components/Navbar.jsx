@@ -1,6 +1,9 @@
 import Image from 'next/image';
 import React, { useState } from 'react';
 import { BiPhoneCall, BiMessageSquareDetail } from 'react-icons/bi';
+import { FiMoreVertical } from 'react-icons/fi';
+import { signOut } from 'firebase/auth';
+import { auth } from '../pages/firebase';
 
 const Navbar = () => {
   return (
@@ -29,6 +32,9 @@ const Navbar = () => {
           <div className='flex flex-row items-center place-content-end space-x-4'>
             <BiPhoneCall className='w-6 h-6 text-gray-500 dark:text-white cursor-pointer' />
             <BiMessageSquareDetail className='w-6 h-6 text-gray-500 dark:text-white cursor-pointer' />
+            <button onClick={() => signOut(auth)}>
+              <FiMoreVertical className='w-6 h-6 text-gray-500 dark:text-white cursor-pointer' />
+            </button>
           </div>
         </div>
       </div>
