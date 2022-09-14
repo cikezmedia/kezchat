@@ -1,8 +1,17 @@
 import React from 'react';
 import Head from 'next/head';
 import { Navbar, Chats } from '../components';
+import { AuthContext } from '../context/AuthContext';
+import { useContext } from 'react';
+import { useRouter } from 'next/router';
 
 const Start = () => {
+  const { currentUser } = useContext(AuthContext);
+  const router = useRouter();
+
+  if (!currentUser) {
+    router.push('/login');
+  }
   return (
     <>
       <Head>
