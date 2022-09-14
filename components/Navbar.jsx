@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { BiPhoneCall, BiMessageSquareDetail } from 'react-icons/bi';
 import { FiMoreVertical } from 'react-icons/fi';
 import { signOut } from 'firebase/auth';
-import { auth } from '../pages/firebase';
+import { auth } from '../firebase';
 
 const Navbar = () => {
   return (

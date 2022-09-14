@@ -7,7 +7,7 @@ import { useForm } from 'react-hook-form';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { createUserWithEmailAndPassword, updateProfile } from 'firebase/auth';
-import { auth, storage, db } from './firebase';
+import { auth, storage, db } from '../firebase';
 import { ref, uploadBytesResumable, getDownloadURL } from 'firebase/storage';
 import { doc, setDoc } from 'firebase/firestore';
 import LoadImg from '../public/loading.gif';

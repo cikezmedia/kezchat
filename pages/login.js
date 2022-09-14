@@ -6,7 +6,7 @@ import { useForm } from 'react-hook-form';
 import Link from 'next/link';
 import LoadImg from '../public/loading.gif';
 import { signInWithEmailAndPassword } from 'firebase/auth';
-import { auth } from './firebase';
+import { auth } from '../firebase';
 import { useRouter } from 'next/router';
 import { AuthContext } from '../context/AuthContext';
 import { useContext } from 'react';
